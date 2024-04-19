@@ -1,35 +1,49 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <title>投稿ページ</title>
-    <link rel="stylesheet" type="text/css" href="./css/post.css">
-  </head>
 
-  <body>
-    <header>
-      <button id="button1">タイムライン</button>  
-      <button id="button2">質問</button>
-      <a>記事内検索</a>
-      <!-- 検索バー -->
-      <input type="text" id="searchInput" placeholder="記事内検索" oninput="searchArticles()">
-    </header> 
+<head>
+  <meta charset="UTF-8">
+  <title>投稿ページ</title>
+  <link rel="stylesheet" type="text/css" href="./css/post.css">
+</head>
 
-    <div id="contents">
-      <form id="post-container">
-          <textarea rows="10" cols="50" id="post_text" placeholder="テキスト入力してね"></textarea><br>
-          <input type="button" onclick="post()" value="投稿">
-      </form>
-      <div id="result"></div>
+<body>
+  <div class="header1">
+    <!-- 検索バー -->
+    <input type="text" id="searchInput" placeholder="記事内検索" oninput="searchArticles()">
+
+  </div>
+  <div class="header2">
+
+    <div class="left-item">
+      <button id="button1">タイムライン</button>
     </div>
 
+    <div class="right-item">
+      <button id="button2">質問</button>
+    </div>
+
+  </div>
 
 
-    <footer>
-      <p>&copy; team D</p>
-    </footer>
+  <div id="contents">
+    <form id="post-container">
+      <input type="text" id="post_title" placeholder="記事タイトル"><br><br>
+      <input type="text" id="post_tag" placeholder="タグを入力してください"><br><br>
+      <textarea rows="10" cols="50" id="post_text" placeholder="テキスト入力してね"></textarea><br>
+      <input type="button" onclick="post()" value="投稿">
+    </form>
+    <div id="result"></div>
+  </div>
 
-    <!-- JavaScriptファイルを読み込む -->
-    <script src="./javascript/post.js"></script>
-  </body>
+
+
+  <footer>
+    <p>&copy; team D</p>
+  </footer>
+
+  <!-- JavaScriptファイルを読み込む -->
+  <script src="./javascript/post.js"></script>
+</body>
+
 </html>
